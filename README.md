@@ -1,4 +1,4 @@
-# SSIS_PROJECT - Simple Data Warehouse Setup
+# SSIS_PROJECT - Data Warehouse Setup
 
 In this project, a data warehouse is set up using SSIS. The project includes various packages for dimension and fact tables, as well as maintenance packages.
 
