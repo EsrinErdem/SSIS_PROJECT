@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB_SQL_STAGING"
+  DTS:DTSID="{6D3B99FE-DF92-4EC5-AB62-3A72102682F8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ICT\ESRINERDEM;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-ESRINERDEM_FINALPROJESI-{6D3B99FE-DF92-4EC5-AB62-3A72102682F8}ICT\ESRINERDEM.STAGING;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

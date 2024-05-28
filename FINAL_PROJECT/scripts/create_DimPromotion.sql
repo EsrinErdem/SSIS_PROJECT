@@ -1,0 +1,18 @@
+CREATE View vw_dimPromotion as (
+SELECT  [PromotionKey]
+      ,[PromotionAlternateKey]
+      ,[EnglishPromotionName]
+      ,[SpanishPromotionName]
+      ,[FrenchPromotionName]
+      ,[DiscountPct]
+      ,[EnglishPromotionType]
+      ,[SpanishPromotionType]
+      ,[FrenchPromotionType]
+      ,[EnglishPromotionCategory]
+      ,[SpanishPromotionCategory]
+      ,[FrenchPromotionCategory]
+      ,[StartDate]
+      ,[EndDate]
+      ,[MinQty]
+      ,[MaxQty]
+  FROM [AdventureworksDW2016CTP3].[dbo].[DimPromotion])

@@ -1,0 +1,3007 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/3/2024 10:15:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICT"
+  DTS:CreatorName="ICT\HFC ICT"
+  DTS:DTSID="{AEAD183C-608C-4435-9DDA-2A54A2E4BF19}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="11_DimProduct3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{FC469F6F-E61D-40B1-B347-3666B1B2F29E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3D225586-2D76-4453-9FB5-77C48991D12D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataFlowName">
+      <DTS:VariableValue
+        DTS:DataType="8">DimProduct2</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6A53EBB7-FE37-481B-8B0B-070AD3F14E06}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExecutionBegan">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2DDD02F9-08D6-4261-A87B-460309624F17}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExecutionEnded">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8BBADBC7-1D5E-4581-94B3-899ECB2CF18F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageName">
+      <DTS:VariableValue
+        DTS:DataType="8">11_DimProduct2.dtsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4E8437E5-9036-49A0-AB59-84E9AFABC18D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="P_ID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F689850D-7C1F-4292-99F0-9253DE475C13}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsDeleted">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D9451319-7D1D-4EFD-B869-041E62F9AC53}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsInserted">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9C1B69F8-BE2C-4492-96AF-C7778E9F6E69}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsNoChange">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D7BD4C37-8720-4577-A97B-70686D070C51}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsUpdated">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{374FBA6E-E0E0-40AC-8B03-2D458A3EAB5F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SubFlowInformation">
+      <DTS:VariableValue
+        DTS:DataType="8">Child Process</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_LoadProduct2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{958CC715-F08F-416E-8519-997DE2FE8883}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_LoadProduct2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_LoadProduct2\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[ProductSubcategoryKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryKey"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]},99)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(ProductSubcategoryKey,99)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[EnglishProductName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishProductName"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]},"TANIMSIZ")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(EnglishProductName,"TANIMSIZ")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[StandardCost]"
+                      cachedDataType="cy"
+                      cachedName="StandardCost"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]},1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(StandardCost,1)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[FinishedGoodsFlag]"
+                      cachedDataType="bool"
+                      cachedName="FinishedGoodsFlag"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]},99)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(FinishedGoodsFlag,99)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]},"TANIMSIZ")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Color,"TANIMSIZ")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]},5)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(ListPrice,5)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[ModelName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ModelName"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]},"TANIMSIZ")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(ModelName,"TANIMSIZ")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[EnglishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="EnglishDescription"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]},"TANIMSIZ")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(EnglishDescription,"TANIMSIZ")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[TurkishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="TurkishDescription"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]},"TANIMSIZ")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(TurkishDescription,"TANIMSIZ")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Colonne dérivée 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[StartDate]"
+                      name="StartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[EndDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[EndDate]"
+                      name="EndDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">NULL(DT_DATE)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">NULL(DT_DATE)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]"
+                      name="IsCurrent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_BOOL)1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_BOOL)1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Colonne dérivée 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[StartDate]"
+                      name="StartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[EndDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[EndDate]"
+                      name="EndDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">NULL(DT_DATE)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">NULL(DT_DATE)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]"
+                      name="IsCurrent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_BOOL)1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_BOOL)1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadProduct2\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Product2]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadProduct2\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ProductBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductBusinessKey"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductBusinessKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ProductSubcategoryKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryKey"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishProductName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishProductName"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishProductName]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[StandardCost]"
+                      cachedDataType="cy"
+                      cachedName="StandardCost"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StandardCost]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[FinishedGoodsFlag]"
+                      cachedDataType="bool"
+                      cachedName="FinishedGoodsFlag"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Color]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ListPrice]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ModelName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ModelName"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ModelName]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[LargePhoto]"
+                      cachedDataType="image"
+                      cachedName="LargePhoto"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LargePhoto]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[LargePhoto]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EnglishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="EnglishDescription"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishDescription]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[TurkishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="TurkishDescription"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TurkishDescription]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[EndDate]"
+                      cachedDataType="date"
+                      cachedName="EndDate"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[IsCurrent]"
+                      cachedDataType="bool"
+                      cachedName="IsCurrent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[IsCurrent]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSKey]"
+                      dataType="i4"
+                      name="ProductSKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductBusinessKey]"
+                      dataType="i4"
+                      name="ProductBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      dataType="i4"
+                      name="ProductSubcategoryKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishProductName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StandardCost]"
+                      dataType="cy"
+                      name="StandardCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      dataType="bool"
+                      name="FinishedGoodsFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ModelName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[LargePhoto]"
+                      dataType="image"
+                      name="LargePhoto" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="EnglishDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[TurkishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="TurkishDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      dataType="dbDate"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      dataType="dbDate"
+                      name="EndDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[IsCurrent]"
+                      dataType="bool"
+                      name="IsCurrent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Fractionnement conditionnel"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Fractionnement conditionnel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Achemine des lignes de données vers différentes sorties, selon le contexte des données. Utilisez des conditions (expressions SSIS) pour spécifier les lignes qui seront acheminées. Par exemple, séparez les enregistrements qui doivent être nettoyés de ceux qui sont prêts à être chargés ou acheminez uniquement un sous-ensemble d'enregistrements."
+              name="Fractionnement conditionnel"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  description="Entrée vers la transformation de fractionnement conditionnel"
+                  name="Entrée de fractionnement conditionnel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_ProductBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="Target_ProductBusinessKey"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ProductBusinessKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="Target_ListPrice"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ListPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[New]"
+                  description="Sortie 1 de la transformation de fractionnement conditionnel"
+                  errorOrTruncationOperation="Calcul"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="New"
+                  synchronousInputId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie l'expression. Cette version d'expression utilise les identificateurs de traçabilité à la place des noms de colonnes."
+                      name="Expression">[ISNULL](#{Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ProductBusinessKey]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie la version claire de l'expression. Cette version d'expression utilise les noms de colonnes."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Target_ProductBusinessKey)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la position de la condition dans la liste des conditions que la transformation évalue. L'ordre d'évaluation se fait par ordre croissant de valeur."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Modified]"
+                  description="Sortie 2 de la transformation de fractionnement conditionnel"
+                  errorOrTruncationOperation="Calcul"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Modified"
+                  synchronousInputId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie l'expression. Cette version d'expression utilise les identificateurs de traçabilité à la place des noms de colonnes."
+                      name="Expression">#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]} != #{Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ListPrice]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie la version claire de l'expression. Cette version d'expression utilise les noms de colonnes."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ListPrice != Target_ListPrice</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la position de la condition dans la liste des conditions que la transformation évalue. L'ordre d'évaluation se fait par ordre croissant de valeur."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[No Change]"
+                  description="Sortie par défaut de la transformation de fractionnement conditionnel"
+                  exclusionGroup="1"
+                  name="No Change"
+                  synchronousInputId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel]"
+                  description="Sortie d'erreur de la transformation de fractionnement conditionnel"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de fractionnement conditionnel"
+                  synchronousInputId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\LookUp_Product"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="LookUp_Product"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT ProductBusinessKey, ListPrice
+ FROM Product2
+WHERE IsCurrent = 1</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT ProductBusinessKey, ListPrice
+ FROM Product2
+WHERE IsCurrent = 1) [refTable]
+where [refTable].[ProductBusinessKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductBusinessKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ListPrice" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadProduct2\LookUp_Product.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche].Columns[ProductBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductBusinessKey"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">ProductBusinessKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ProductBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ProductBusinessKey]"
+                      name="Target_ProductBusinessKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">ProductBusinessKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ListPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance].Columns[Target_ListPrice]"
+                      name="Target_ListPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">ListPrice</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Nombre de lignes_Modified"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes_Modified">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsUpdated</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Nombre de lignes_Modified.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadProduct2\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Nombre de lignes_NoChange"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes_NoChange">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsNoChange</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Nombre de lignes_NoChange.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadProduct2\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\Nombre de ligne_New"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de ligne_New">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsInserted</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\Nombre de ligne_New.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\Nombre de ligne_New.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadProduct2\Nombre de ligne_New.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, appelez une procédure stockée 'nouvelle configuration d'employé' pour chaque ligne de la table 'nouveaux employés'. Remarque : l'exécution d'une instruction SQL pour chaque ligne d'un flux de données volumineux peut prendre beaucoup de temps."
+              name="OLE DB _SQLCommand UPDATES_Product"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[Product2]
+
+SET 
+EndDate = GETDATE()
+, IsCurrent = 0
+WHERE [ProductBusinessKey] = ? AND IsCurrent = 1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB]"
+                  errorOrTruncationOperation="Exécution de commande"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de commande OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB].Columns[ProductBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductBusinessKey"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie de commande OLE DB]"
+                  exclusionGroup="1"
+                  name="Sortie de commande OLE DB"
+                  synchronousInputId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie d'erreur de commande OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de commande OLE DB"
+                  synchronousInputId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="SQL_OLE DB_Product"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Product2]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[ProductBusinessKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductBusinessKey"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductBusinessKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[ProductSubcategoryKey]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryKey"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[EnglishProductName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishProductName"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishProductName]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[StandardCost]"
+                      cachedDataType="cy"
+                      cachedName="StandardCost"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[StandardCost]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[FinishedGoodsFlag]"
+                      cachedDataType="bool"
+                      cachedName="FinishedGoodsFlag"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[Color]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[ListPrice]"
+                      cachedDataType="cy"
+                      cachedName="ListPrice"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ListPrice]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[ModelName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ModelName"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ModelName]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[LargePhoto]"
+                      cachedDataType="image"
+                      cachedName="LargePhoto"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[LargePhoto]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[LargePhoto]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[EnglishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="EnglishDescription"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishDescription]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[TurkishDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="400"
+                      cachedName="TurkishDescription"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[TurkishDescription]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[EndDate]"
+                      cachedDataType="date"
+                      cachedName="EndDate"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].Columns[IsCurrent]"
+                      cachedDataType="bool"
+                      cachedName="IsCurrent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[IsCurrent]"
+                      lineageId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée].Columns[IsCurrent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSKey]"
+                      dataType="i4"
+                      name="ProductSKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductBusinessKey]"
+                      dataType="i4"
+                      name="ProductBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      dataType="i4"
+                      name="ProductSubcategoryKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishProductName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[StandardCost]"
+                      dataType="cy"
+                      name="StandardCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      dataType="bool"
+                      name="FinishedGoodsFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[ModelName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[LargePhoto]"
+                      dataType="image"
+                      name="LargePhoto" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="EnglishDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[TurkishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="TurkishDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      dataType="dbDate"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      dataType="dbDate"
+                      name="EndDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB].ExternalColumns[IsCurrent]"
+                      dataType="bool"
+                      name="IsCurrent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="SQL_OLEDB_STG_DimProduct"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[vw_dimProduct]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Connections[OleDbConnection]"
+                  connectionManagerID="{6D3B99FE-DF92-4EC5-AB62-3A72102682F8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_STAGING]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ProductBusinessKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductBusinessKey]"
+                      name="ProductBusinessKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ProductSubcategoryKey]"
+                      name="ProductSubcategoryKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishProductName]"
+                      length="50"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishProductName]"
+                      name="EnglishProductName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[StandardCost]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[StandardCost]"
+                      name="StandardCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[FinishedGoodsFlag]"
+                      name="FinishedGoodsFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[Color]"
+                      length="15"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[Color]"
+                      name="Color"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ListPrice]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ListPrice]"
+                      name="ListPrice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ModelName]"
+                      length="50"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[ModelName]"
+                      name="ModelName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[LargePhoto]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[LargePhoto]"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[LargePhoto]"
+                      name="LargePhoto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishDescription]"
+                      length="400"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[EnglishDescription]"
+                      name="EnglishDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[TurkishDescription]"
+                      length="400"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].Columns[TurkishDescription]"
+                      name="TurkishDescription"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ProductBusinessKey]"
+                      dataType="i4"
+                      name="ProductBusinessKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ProductSubcategoryKey]"
+                      dataType="i4"
+                      name="ProductSubcategoryKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishProductName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishProductName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[StandardCost]"
+                      dataType="cy"
+                      name="StandardCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[FinishedGoodsFlag]"
+                      dataType="bool"
+                      name="FinishedGoodsFlag" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ListPrice]"
+                      dataType="cy"
+                      name="ListPrice" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[ModelName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[LargePhoto]"
+                      dataType="image"
+                      name="LargePhoto" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="EnglishDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB].ExternalColumns[TurkishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      name="TurkishDescription" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ProductBusinessKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ProductBusinessKey]"
+                      name="ProductBusinessKey" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ProductSubcategoryKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ProductSubcategoryKey]"
+                      name="ProductSubcategoryKey" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishProductName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishProductName]"
+                      name="EnglishProductName" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[StandardCost]"
+                      dataType="cy"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[StandardCost]"
+                      name="StandardCost" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[FinishedGoodsFlag]"
+                      dataType="bool"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[FinishedGoodsFlag]"
+                      name="FinishedGoodsFlag" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[Color]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[Color]"
+                      name="Color" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ListPrice]"
+                      dataType="cy"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ListPrice]"
+                      name="ListPrice" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ModelName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ModelName]"
+                      name="ModelName" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[LargePhoto]"
+                      dataType="image"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[LargePhoto]"
+                      name="LargePhoto" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishDescription]"
+                      name="EnglishDescription" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[TurkishDescription]"
+                      dataType="wstr"
+                      length="400"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[TurkishDescription]"
+                      name="TurkishDescription" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Modified]"
+              endId="Package\DFT_LoadProduct2\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]"
+              name="Modified"
+              startId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[Modified]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[New]"
+              endId="Package\DFT_LoadProduct2\Nombre de ligne_New.Inputs[Nombre de lignes entrée 1]"
+              name="New"
+              startId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[New]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[No Change]"
+              endId="Package\DFT_LoadProduct2\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]"
+              name="No Change"
+              startId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Outputs[No Change]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Nombre de lignes sortie 1]"
+              endId="Package\DFT_LoadProduct2\Colonne dérivée 1.Inputs[Entrée de colonne dérivée]"
+              name="Nombre de lignes sortie 1"
+              startId="Package\DFT_LoadProduct2\Nombre de ligne_New.Outputs[Nombre de lignes sortie 1]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Nombre de lignes sortie 11]"
+              endId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Inputs[Entrée de commande OLE DB]"
+              name="Nombre de lignes sortie 1"
+              startId="Package\DFT_LoadProduct2\Nombre de lignes_Modified.Outputs[Nombre de lignes sortie 1]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée]"
+              endId="Package\DFT_LoadProduct2\LookUp_Product.Inputs[Entrée de recherche]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT_LoadProduct2\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée1]"
+              endId="Package\DFT_LoadProduct2\SQL_OLE DB_Product.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT_LoadProduct2\Colonne dérivée 1.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée2]"
+              endId="Package\DFT_LoadProduct2\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT_LoadProduct2\Colonne dérivée 2.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de commande OLE DB]"
+              endId="Package\DFT_LoadProduct2\Colonne dérivée 2.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de commande OLE DB"
+              startId="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product.Outputs[Sortie de commande OLE DB]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\DFT_LoadProduct2\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\DFT_LoadProduct2\LookUp_Product.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\DFT_LoadProduct2.Paths[Sortie de source OLE DB]"
+              endId="Package\DFT_LoadProduct2\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source OLE DB"
+              startId="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct.Outputs[Sortie de source OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXP_BEGAN"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Tâche d'expression"
+      DTS:DTSID="{A0E293AD-6477-48F8-9217-846FCA263F99}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXP_BEGAN"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::ExecutionBegan] = (DT_STR, 4, 1252) DatePart(&quot;yyyy&quot;, GETDATE()) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mm&quot;, GetDate()), 2) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;dd&quot;, GetDate()), 2) + &quot; &quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;hh&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mi&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;ss&quot;, GetDate()), 2) + &quot;.000&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXP_END"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Tâche d'expression"
+      DTS:DTSID="{1E1E39F1-AF1B-4C50-9CDC-E122C63B3054}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXP_END"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::ExecutionEnded] = (DT_STR, 4, 1252) DatePart(&quot;yyyy&quot;, GETDATE()) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mm&quot;, GetDate()), 2) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;dd&quot;, GetDate()), 2) + &quot; &quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;hh&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mi&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;ss&quot;, GetDate()), 2) + &quot;.000&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get P_ID from PackageLogger"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{0E1A1405-6C00-4ED5-AA17-4308CDB6C7AB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get P_ID from PackageLogger"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="Select PackageLoggerId&#xA;from [dbo].[PackageLogger]&#xA;where&#xA;&#x9;[PackageName]=?&#xA;and [DataFlowName]=?&#xA;and [SubFlowInformation]=?&#xA;and [ExecutionBegan]=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL-Insert PackageLogger Execution Start Date"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{342FBD1A-9617-4057-BF3B-F58F7D1BC52D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL-Insert PackageLogger Execution Start Date"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="INSERT INTO [dbo].[PackageLogger]&#xA;( PackageName&#xA;, DataFlowName&#xA;, SubFlowInformation&#xA;, ExecutionBegan&#xA;, ExecutionEnded&#xA;, ExecutionStatus&#xA;, RunTimeEnvironment&#xA;)&#xA;VALUES (?, ?, ?, ?, ?, 'Running' , 'Prod' )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="User::ExecutionEnded"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Update Package Logger"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{DB65D037-4876-470C-B725-C2A53076730C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Update Package Logger"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="update [PackageLogger]&#xA;&#xA;   set [RowsInserted]       = ?&#xA;&#xA;    , [RowsUpdated]     = ?&#xA;&#xA;    , [RowsDeleted]     = ?&#xA;&#xA;, [RowsNoChange]     = ?&#xA;     &#xA;     , [ExecutionEnded]     = ?&#xA;    &#xA;     , [ExecutionStatus] = 'Complete'&#xA;&#xA;    where &#xA;       [PackageName]        = ?&#xA;   &#xA;    and [DataFlowName]       = ?&#xA;   &#xA;    and [SubFlowInformation] = ?&#xA;   &#xA;    and [ExecutionBegan]     = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::RowsInserted"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RowsUpdated"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="User::ExecutionEnded"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::RowsDeleted"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::RowsNoChange"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{65A2D375-A220-49C3-BCE7-6A533E4D394E}"
+      DTS:From="Package\EXP_BEGAN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SQL-Insert PackageLogger Execution Start Date" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6519F060-F424-48FD-B91B-DEF4872026F8}"
+      DTS:From="Package\SQL-Insert PackageLogger Execution Start Date"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get P_ID from PackageLogger" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{DFF95B4F-65A3-41FC-99FD-234C50A60ABF}"
+      DTS:From="Package\DFT_LoadProduct2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\EXP_END" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{3AE576B3-AD52-4610-8671-5098E45F2B7C}"
+      DTS:From="Package\EXP_END"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQL_Update Package Logger" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{01DA88B1-72CC-47E9-A49E-E8AE142A6762}"
+      DTS:From="Package\Get P_ID from PackageLogger"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DFT_LoadProduct2" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{F944DF54-9776-4DB4-A8CF-5D2E23DC0221}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="Propriété de propagation de l'événement"
+          DTS:DTSID="{6D65E6B9-7263-4E9B-958D-5CFF8AAD46FF}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL_Error Log"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{F9829F73-E271-41BC-B9AC-2B18BB880A6F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_Error Log"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+              SQLTask:SqlStatementSource="insert into [dbo].[PackageErrorLog]&#xA;([P_ID]&#xA;      ,[MachineName]&#xA;      ,[PackageName]&#xA;      ,[TaskName]&#xA;      ,[ErrorCode]&#xA;      ,[ErrorDescription]&#xA;      ,[Date]&#xA;)&#xA;Values (?,?,?,?,?,?,getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::P_ID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::MachineName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{CE56F7FD-A296-4C93-8725-DEAECDC04624}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_Update Package Logger Fail"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+              SQLTask:SqlStatementSource="update [PackageLogger]&#xA;set [ExecutionStatus]='Failed'&#xA;where&#xA;[PackageName] =?&#xA;and [DataFlowName]=?&#xA;and [SubFlowInformation]=?&#xA;and [ExecutionBegan] =?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::DataFlowName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::SubFlowInformation"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::ExecutionBegan"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{899C8EE1-6BD0-492D-B53D-1F56D4F9454D}"
+          DTS:From="Package.EventHandlers[OnError]\SQL_Error Log"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\DFT_LoadProduct2"
+          TopLeft="75.1000000000001,310.3" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\EXP_BEGAN"
+          TopLeft="88.7,5.49999999999995" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\EXP_END"
+          TopLeft="95.9000000000001,411.9" />
+        <NodeLayout
+          Size="308,41.6"
+          Id="Package\Get P_ID from PackageLogger"
+          TopLeft="5.50000000000003,208.7" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\SQL_Update Package Logger"
+          TopLeft="51.1000000000001,513.5" />
+        <NodeLayout
+          Size="302.4,41.6"
+          Id="Package\SQL-Insert PackageLogger Execution Start Date"
+          TopLeft="37.9,107.1" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="159.5,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.6,60"
+              Start="0,0"
+              End="29.6,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="25.6,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.6,30"
+                    Point2="29.6,30"
+                    Point3="29.6,34" />
+                  <mssgle:LineSegment
+                    End="29.6,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.963242187500001,35,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="189.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.6,60"
+              Start="0,0"
+              End="-29.6,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-25.6,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.6,30"
+                    Point2="-29.6,30"
+                    Point3="-29.6,34" />
+                  <mssgle:LineSegment
+                    End="-29.6,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.5632421875,35,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="159.5,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.08251953125,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="159.5,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.0825195312501,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="159.5,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.08251953125,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package.EventHandlers[OnError]\SQL_Error Log"
+          TopLeft="208.66666203075,55.6666666322284" />
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail"
+          TopLeft="176.66666203075,149.666666632228" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          TopLeft="282.66666203075,97.2666666322284">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.3999999999998,52.4"
+              Start="0,0"
+              End="12.3999999999998,44.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2"
+                    Point2="0,26.2"
+                    Point3="4,26.2" />
+                  <mssgle:LineSegment
+                    End="8.39999999999981,26.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.39999999999981,26.2"
+                    Point2="12.3999999999998,26.2"
+                    Point3="12.3999999999998,30.2" />
+                  <mssgle:LineSegment
+                    End="12.3999999999998,44.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\DFT_LoadProduct2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_LoadProduct2\LookUp_Product"
+          TopLeft="294.1,208.7" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\DFT_LoadProduct2\Nombre de ligne_New"
+          TopLeft="281.7,411.9" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\DFT_LoadProduct2\Nombre de lignes_NoChange"
+          TopLeft="5.50000000000003,411.9" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\DFT_LoadProduct2\Nombre de lignes_Modified"
+          TopLeft="522.7,411.9" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct"
+          TopLeft="258.5,5.49999999999995" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\DFT_LoadProduct2\Colonne dérivée"
+          TopLeft="294.9,107.1" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\DFT_LoadProduct2\Fractionnement conditionnel"
+          TopLeft="267.7,310.3" />
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de source OLE DB]"
+          TopLeft="372.1,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée]"
+          TopLeft="372.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[No Change]"
+          TopLeft="321.9,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-208.8,59.9999999999999"
+              Start="0,0"
+              End="-208.8,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5044136191677"
+                    Point2="0,20.5044136191677"
+                    Point3="-4,20.5044136191677" />
+                  <mssgle:LineSegment
+                    End="-204.8,20.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-204.8,20.5044136191677"
+                    Point2="-208.8,20.5044136191677"
+                    Point3="-208.8,24.5044136191677" />
+                  <mssgle:LineSegment
+                    End="-208.8,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.12134765625,25.5044136191677,49.4426953125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[New]"
+          TopLeft="372.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.23404296875,21.55126953125,20.4680859375,9.3974609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Modified]"
+          TopLeft="422.3,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="202.8,59.9999999999999"
+              Start="0,0"
+              End="202.8,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5044136191677"
+                    Point2="0,20.5044136191677"
+                    Point3="4,20.5044136191677" />
+                  <mssgle:LineSegment
+                    End="198.8,20.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="198.8,20.5044136191677"
+                    Point2="202.8,20.5044136191677"
+                    Point3="202.8,24.5044136191677" />
+                  <mssgle:LineSegment
+                    End="202.8,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="82.49201171875,25.5044136191677,37.8159765625,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\DFT_LoadProduct2\SQL_OLE DB_Product"
+          TopLeft="247.7,615.1" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\DFT_LoadProduct2\Colonne dérivée 1"
+          TopLeft="258.9,513.5" />
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Nombre de lignes sortie 1]"
+          TopLeft="372.1,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31.9999999999999,60.0000000000002"
+              Start="0,0"
+              End="-31.9999999999999,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.0000000000001"
+                    Point2="0,30.0000000000001"
+                    Point3="-4,30.0000000000001" />
+                  <mssgle:LineSegment
+                    End="-27.9999999999999,30.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.9999999999999,30.0000000000001"
+                    Point2="-31.9999999999999,30.0000000000001"
+                    Point3="-31.9999999999999,34.0000000000001" />
+                  <mssgle:LineSegment
+                    End="-31.9999999999999,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée1]"
+          TopLeft="340.1,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\DFT_LoadProduct2\Destination OLE DB"
+          TopLeft="559.9999777476,689.133337417709" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\DFT_LoadProduct2\Colonne dérivée 2"
+          TopLeft="564.999977548918,602.466670062277" />
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de colonne dérivée2]"
+          TopLeft="645.899977648259,644.066670062277">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.0666673554315"
+              Start="0,0"
+              End="0,37.5666673554315">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5666673554315" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="287.2,41.6"
+          Id="Package\DFT_LoadProduct2\OLE DB _SQLCommand UPDATES_Product"
+          TopLeft="481.5,513.5" />
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Nombre de lignes sortie 11]"
+          TopLeft="625.1,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000002"
+              Start="0,0"
+              End="0,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de commande OLE DB]"
+          TopLeft="625.1,555.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.0999775489177,47.3666700622769"
+              Start="0,0"
+              End="21.0999775489177,39.8666700622769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.6833350311384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.6833350311384"
+                    Point2="0,23.6833350311384"
+                    Point3="4,23.6833350311384" />
+                  <mssgle:LineSegment
+                    End="17.0999775489177,23.6833350311384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.0999775489177,23.6833350311384"
+                    Point2="21.0999775489177,23.6833350311384"
+                    Point3="21.0999775489177,27.6833350311384" />
+                  <mssgle:LineSegment
+                    End="21.0999775489177,39.8666700622769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadProduct2.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="372.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,20.4453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadProduct2\LookUp_Product">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadProduct2\SQL_OLEDB_STG_DimProduct">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadProduct2\SQL_OLE DB_Product">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadProduct2\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

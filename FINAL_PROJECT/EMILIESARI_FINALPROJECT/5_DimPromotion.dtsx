@@ -1,0 +1,2414 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/3/2024 10:10:26 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ICT"
+  DTS:CreatorName="ICT\HFC ICT"
+  DTS:DTSID="{4C1C8864-E99D-410B-8DCF-83C03EC62641}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="5_DimPromotion"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{9BB70DF2-BBCF-4CB2-8F41-4C2FF08F0DAA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3178D27D-7B54-4542-8937-8B41E35FC645}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataFlowName">
+      <DTS:VariableValue
+        DTS:DataType="8">DimPromotion</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F1299495-9EC0-4316-929B-AD6DD02CE321}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExecutionBegan">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F80AC8F8-F659-4246-A41F-3EB823E6AD18}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExecutionEnded">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F93DC11-6E9E-45A4-A783-266589ABAB29}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageName">
+      <DTS:VariableValue
+        DTS:DataType="8">5_DimProduct.dtsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{09ED2711-FD3D-4653-B1B9-3107F0ECD45F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="P_ID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D531A4AE-E158-4967-9FF3-A5DA97F29ADD}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsDeleted">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4DAAEFB5-C310-4A52-9300-9939112915A3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsInserted">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F0433CDD-4FD6-47EB-966F-453A9BEC57F8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsNoChange">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E571D69F-7B85-45F9-885B-D9C208F8BF38}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowsUpdated">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0353F604-FDB8-40E1-92D0-1E82D481719A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SubFlowInformation">
+      <DTS:VariableValue
+        DTS:DataType="8">Child Process</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_LoadPromotion"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{1941a699-e6a1-4548-bdfa-c7a256078fca}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_LoadPromotion"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_LoadPromotion\Colonne dérivée"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="Colonne dérivée"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[MaxQty]"
+                      cachedDataType="i4"
+                      cachedName="MaxQty"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[REPLACENULL](#{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]},999)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(MaxQty,999)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadPromotion\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT_LoadPromotion\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\Fractionnement conditionnel"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Fractionnement conditionnel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Achemine des lignes de données vers différentes sorties, selon le contexte des données. Utilisez des conditions (expressions SSIS) pour spécifier les lignes qui seront acheminées. Par exemple, séparez les enregistrements qui doivent être nettoyés de ceux qui sont prêts à être chargés ou acheminez uniquement un sous-ensemble d'enregistrements."
+              name="Fractionnement conditionnel"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  description="Entrée vers la transformation de fractionnement conditionnel"
+                  name="Entrée de fractionnement conditionnel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_PromotionKey]"
+                      cachedDataType="i4"
+                      cachedName="Target_PromotionKey"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_PromotionKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[EnglishPromotionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EnglishPromotionName"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[DiscountPct]"
+                      cachedDataType="r8"
+                      cachedName="DiscountPct"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[EndDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EndDate"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[MinQty]"
+                      cachedDataType="i4"
+                      cachedName="MinQty"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[MaxQty]"
+                      cachedDataType="i4"
+                      cachedName="MaxQty"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_EnglishPromotionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Target_EnglishPromotionName"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EnglishPromotionName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_DiscountPct]"
+                      cachedDataType="r8"
+                      cachedName="Target_DiscountPct"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_DiscountPct]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Target_StartDate"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_EndDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Target_EndDate"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_MinQty]"
+                      cachedDataType="i4"
+                      cachedName="Target_MinQty"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MinQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel].Columns[Target_MaxQty]"
+                      cachedDataType="i4"
+                      cachedName="Target_MaxQty"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MaxQty]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[New]"
+                  description="Sortie 1 de la transformation de fractionnement conditionnel"
+                  errorOrTruncationOperation="Calcul"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="New"
+                  synchronousInputId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie l'expression. Cette version d'expression utilise les identificateurs de traçabilité à la place des noms de colonnes."
+                      name="Expression">[ISNULL](#{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_PromotionKey]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie la version claire de l'expression. Cette version d'expression utilise les noms de colonnes."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Target_PromotionKey)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la position de la condition dans la liste des conditions que la transformation évalue. L'ordre d'évaluation se fait par ordre croissant de valeur."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Modified]"
+                  description="Sortie 2 de la transformation de fractionnement conditionnel"
+                  errorOrTruncationOperation="Calcul"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Modified"
+                  synchronousInputId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie l'expression. Cette version d'expression utilise les identificateurs de traçabilité à la place des noms de colonnes."
+                      name="Expression">#{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EnglishPromotionName]} || #{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_DiscountPct]} || #{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_StartDate]} || #{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EndDate]} || #{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MinQty]} || #{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]} != #{Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MaxQty]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Spécifie la version claire de l'expression. Cette version d'expression utilise les noms de colonnes."
+                      expressionType="Notify"
+                      name="FriendlyExpression">EnglishPromotionName != Target_EnglishPromotionName || DiscountPct != Target_DiscountPct || StartDate != Target_StartDate || EndDate != Target_EndDate || MinQty != Target_MinQty || MaxQty != Target_MaxQty</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la position de la condition dans la liste des conditions que la transformation évalue. L'ordre d'évaluation se fait par ordre croissant de valeur."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[No Change]"
+                  description="Sortie par défaut de la transformation de fractionnement conditionnel"
+                  exclusionGroup="1"
+                  name="No Change"
+                  synchronousInputId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel]"
+                  description="Sortie d'erreur de la transformation de fractionnement conditionnel"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de fractionnement conditionnel"
+                  synchronousInputId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Sortie d'erreur de fractionnement conditionnel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\LookUp_Promotion"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Recherche;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;6"
+              description="Joint des colonnes supplémentaires au flux de données en recherchant des valeurs dans une table. Par exemple, joignez la colonne 'id employé' à la table des employés afin d'obtenir la 'date d'embauche' et le 'nom de l'employé'. Nous recommandons cette transformation lorsque la table de recherche peut être stockée en mémoire."
+              name="LookUp_Promotion"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie l'instruction SQL qui génère la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [PromotionSKey]
+      ,[PromotionKey]
+      ,[EnglishPromotionName]
+      ,[DiscountPct]
+      ,[StartDate]
+      ,[EndDate]
+      ,[MinQty]
+      ,[MaxQty]
+  FROM [FINALPROJE_DWH].[dbo].[Promotion]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie une instruction SQL qui utilise des paramètres pour générer la table de correspondance."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT  [PromotionSKey]
+      ,[PromotionKey]
+      ,[EnglishPromotionName]
+      ,[DiscountPct]
+      ,[StartDate]
+      ,[EndDate]
+      ,[MinQty]
+      ,[MaxQty]
+  FROM [FINALPROJE_DWH].[dbo].[Promotion]) [refTable]
+where [refTable].[PromotionKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de connexion utilisé pour accéder au dataset de référence."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le type de cache de la table de correspondance."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie comment la transformation de recherche gère les lignes sans entrées correspondantes dans le jeu de données de référence."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le pourcentage du cache alloué aux lignes sans entrées correspondantes dans le dataset de référence."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilisation maximale de la mémoire pour le cache de référence sur une plateforme 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indique si les métadonnées sont à référencer en format XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PromotionSKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PromotionKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishPromotionName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DiscountPct" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StartDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MinQty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaxQty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
+                  name="ParameterMap">#{Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Détermine si les clés dupliquées dans les données de référence doivent être traitées en tant qu'erreurs lorsque le mode Cache complet est utilisé."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadPromotion\LookUp_Promotion.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Gestionnaire de connexions utilisé pour accéder aux données de correspondance."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche]"
+                  name="Entrée de recherche">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche].Columns[PromotionKey]"
+                      cachedDataType="i4"
+                      cachedName="PromotionKey"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence sur laquelle une colonne se lie."
+                          name="JoinToReferenceColumn">PromotionKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance]"
+                  errorOrTruncationOperation="Recherche"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Sortie de recherche avec correspondance"
+                  synchronousInputId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_PromotionKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_PromotionKey]"
+                      name="Target_PromotionKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">PromotionKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EnglishPromotionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      length="50"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EnglishPromotionName]"
+                      name="Target_EnglishPromotionName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">EnglishPromotionName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_DiscountPct]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_DiscountPct]"
+                      name="Target_DiscountPct"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">DiscountPct</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_StartDate]"
+                      name="Target_StartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">StartDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EndDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_EndDate]"
+                      name="Target_EndDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">EndDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MinQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MinQty]"
+                      name="Target_MinQty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">MinQty</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MaxQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copie de colonnes"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance].Columns[Target_MaxQty]"
+                      name="Target_MaxQty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Spécifie la colonne de la table de référence à partir de laquelle une colonne est copiée."
+                          name="CopyFromReferenceColumn">MaxQty</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche sans correspondance]"
+                  description="Sortie de recherche gérant les lignes sans entrées correspondantes dans le dataset de référence. Utilisez cette sortie lorsque la propriété NoMatchBehavior a la valeur « Envoyez les lignes sans entrées correspondantes dans la sortie sans correspondance »."
+                  exclusionGroup="1"
+                  name="Sortie de recherche sans correspondance"
+                  synchronousInputId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie d'erreur de recherche]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de recherche"
+                  synchronousInputId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie d'erreur de recherche].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie d'erreur de recherche].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\Nombre de lignes_Modified"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes_Modified">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsUpdated</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_Modified.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadPromotion\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\Nombre de lignes_New"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes_New">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsInserted</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_New.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_New.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadPromotion\Nombre de lignes_New.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\Nombre de lignes_NoChange"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Nombre de lignes;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Compte les lignes à mesure qu'elles franchissent un flux de données. Par exemple, utilisez le nombre de lignes traitées pour déterminer s'il faut ou non effectuer les opérations de nettoyage, ou mettez à jour le texte dans un message électronique pour communiquer l'état du traitement."
+              name="Nombre de lignes_NoChange">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nombre de lignes."
+                  name="VariableName">User::RowsNoChange</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]"
+                  hasSideEffects="true"
+                  name="Nombre de lignes entrée 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\Nombre de lignes_NoChange.Outputs[Nombre de lignes sortie 1]"
+                  name="Nombre de lignes sortie 1"
+                  synchronousInputId="Package\DFT_LoadPromotion\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Commande OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;2"
+              description="Exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, appelez une procédure stockée 'nouvelle configuration d'employé' pour chaque ligne de la table 'nouveaux employés'. Remarque : l'exécution d'une instruction SQL pour chaque ligne d'un flux de données volumineux peut prendre beaucoup de temps."
+              name="OLE DB_SQL Command UPDATES_Promotion"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[Promotion]
+
+SET EnglishPromotionName = ?
+,DiscountPct = ?
+,StartDate =?
+,EndDate=?
+,MinQty=?
+,MaxQty=?
+WHERE [PromotionKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB]"
+                  errorOrTruncationOperation="Exécution de commande"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de commande OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[EnglishPromotionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EnglishPromotionName"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[DiscountPct]"
+                      cachedDataType="r8"
+                      cachedName="DiscountPct"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[EndDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EndDate"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[MinQty]"
+                      cachedDataType="i4"
+                      cachedName="MinQty"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_4]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[MaxQty]"
+                      cachedDataType="i4"
+                      cachedName="MaxQty"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_5]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].Columns[PromotionKey]"
+                      cachedDataType="i4"
+                      cachedName="PromotionKey"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_6]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_1]"
+                      dataType="r8"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_2]"
+                      dataType="dbTimeStamp"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_3]"
+                      dataType="dbTimeStamp"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Informations de paramètre.  Correspond aux valeurs DBPARAMFLAGSENUM OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie de commande OLE DB]"
+                  exclusionGroup="1"
+                  name="Sortie de commande OLE DB"
+                  synchronousInputId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie d'erreur de commande OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de commande OLE DB"
+                  synchronousInputId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Outputs[Sortie d'erreur de commande OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="SQL_OLE DB_Promotion"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Promotion]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Connections[OleDbConnection]"
+                  connectionManagerID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_FINALPROJE_DWH]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[PromotionKey]"
+                      cachedDataType="i4"
+                      cachedName="PromotionKey"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[PromotionKey]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[EnglishPromotionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EnglishPromotionName"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionName]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[DiscountPct]"
+                      cachedDataType="r8"
+                      cachedName="DiscountPct"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[DiscountPct]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[EnglishPromotionType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishPromotionType"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionType]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionType]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[EnglishPromotionCategory]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EnglishPromotionCategory"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionCategory]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionCategory]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[EndDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EndDate"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[MinQty]"
+                      cachedDataType="i4"
+                      cachedName="MinQty"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[MinQty]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]" />
+                    <inputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].Columns[MaxQty]"
+                      cachedDataType="i4"
+                      cachedName="MaxQty"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[MaxQty]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[PromotionSKey]"
+                      dataType="i4"
+                      name="PromotionSKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[PromotionKey]"
+                      dataType="i4"
+                      name="PromotionKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionName]"
+                      dataType="wstr"
+                      length="255"
+                      name="EnglishPromotionName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[DiscountPct]"
+                      dataType="r8"
+                      name="DiscountPct" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionType]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishPromotionType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EnglishPromotionCategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishPromotionCategory" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[MinQty]"
+                      dataType="i4"
+                      name="MinQty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB].ExternalColumns[MaxQty]"
+                      dataType="i4"
+                      name="MaxQty" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="SQL_OLEDB_STG_DimPromotion"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[vw_dimPromotion]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Connections[OleDbConnection]"
+                  connectionManagerID="{6D3B99FE-DF92-4EC5-AB62-3A72102682F8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB_SQL_STAGING]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[PromotionKey]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[PromotionKey]"
+                      name="PromotionKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionName]"
+                      length="255"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionName]"
+                      name="EnglishPromotionName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[DiscountPct]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[DiscountPct]"
+                      name="DiscountPct"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionType]"
+                      length="50"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionType]"
+                      name="EnglishPromotionType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionCategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionCategory]"
+                      length="50"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EnglishPromotionCategory]"
+                      name="EnglishPromotionCategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[StartDate]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[StartDate]"
+                      name="StartDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EndDate]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[EndDate]"
+                      name="EndDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[MinQty]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MinQty]"
+                      name="MinQty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[MaxQty]"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].Columns[MaxQty]"
+                      name="MaxQty"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[PromotionKey]"
+                      dataType="i4"
+                      name="PromotionKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionName]"
+                      dataType="wstr"
+                      length="255"
+                      name="EnglishPromotionName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[DiscountPct]"
+                      dataType="r8"
+                      name="DiscountPct" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionType]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishPromotionType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EnglishPromotionCategory]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishPromotionCategory" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[MinQty]"
+                      dataType="i4"
+                      name="MinQty" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB].ExternalColumns[MaxQty]"
+                      dataType="i4"
+                      name="MaxQty" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[PromotionKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[PromotionKey]"
+                      name="PromotionKey" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionName]"
+                      name="EnglishPromotionName" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[DiscountPct]"
+                      dataType="r8"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[DiscountPct]"
+                      name="DiscountPct" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionType]"
+                      name="EnglishPromotionType" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionCategory]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EnglishPromotionCategory]"
+                      name="EnglishPromotionCategory" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[StartDate]"
+                      name="StartDate" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EndDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[EndDate]"
+                      name="EndDate" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[MinQty]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[MinQty]"
+                      name="MinQty" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[MaxQty]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[MaxQty]"
+                      name="MaxQty" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Modified]"
+              endId="Package\DFT_LoadPromotion\Nombre de lignes_Modified.Inputs[Nombre de lignes entrée 1]"
+              name="Modified"
+              startId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[Modified]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[New]"
+              endId="Package\DFT_LoadPromotion\Nombre de lignes_New.Inputs[Nombre de lignes entrée 1]"
+              name="New"
+              startId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[New]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[No Change]"
+              endId="Package\DFT_LoadPromotion\Nombre de lignes_NoChange.Inputs[Nombre de lignes entrée 1]"
+              name="No Change"
+              startId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Outputs[No Change]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Nombre de lignes sortie 1]"
+              endId="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion.Inputs[Entrée de destination OLE DB]"
+              name="Nombre de lignes sortie 1"
+              startId="Package\DFT_LoadPromotion\Nombre de lignes_New.Outputs[Nombre de lignes sortie 1]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Nombre de lignes sortie 11]"
+              endId="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion.Inputs[Entrée de commande OLE DB]"
+              name="Nombre de lignes sortie 1"
+              startId="Package\DFT_LoadPromotion\Nombre de lignes_Modified.Outputs[Nombre de lignes sortie 1]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Sortie de colonne dérivée]"
+              endId="Package\DFT_LoadPromotion\LookUp_Promotion.Inputs[Entrée de recherche]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT_LoadPromotion\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\DFT_LoadPromotion\Fractionnement conditionnel.Inputs[Entrée de fractionnement conditionnel]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\DFT_LoadPromotion\LookUp_Promotion.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\DFT_LoadPromotion.Paths[Sortie de source OLE DB]"
+              endId="Package\DFT_LoadPromotion\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+              name="Sortie de source OLE DB"
+              startId="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion.Outputs[Sortie de source OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXP_BEGAN"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Tâche d'expression"
+      DTS:DTSID="{19185673-2330-4d47-bb5d-c224b548dceb}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXP_BEGAN"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\EXP_BEGAN.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{5CFA1A7A-5410-4DB7-8288-333802423FBF}"
+          DTS:EventID="16384"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="Propriété de propagation de l'événement"
+              DTS:DTSID="{D5BEDDBC-7608-4244-9452-DE1EE1ED3F18}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::ExecutionBegan] = (DT_STR, 4, 1252) DatePart(&quot;yyyy&quot;, GETDATE()) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mm&quot;, GetDate()), 2) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;dd&quot;, GetDate()), 2) + &quot; &quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;hh&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mi&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;ss&quot;, GetDate()), 2) + &quot;.000&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXP_END"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Tâche d'expression"
+      DTS:DTSID="{2aece504-af59-4626-8384-7cb5010ef4ad}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXP_END"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::ExecutionEnded] = (DT_STR, 4, 1252) DatePart(&quot;yyyy&quot;, GETDATE()) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mm&quot;, GetDate()), 2) + &quot;-&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;dd&quot;, GetDate()), 2) + &quot; &quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;hh&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;mi&quot;, GetDate()), 2) + &quot;:&quot; + Right(&quot;00&quot; + (DT_STR, 2, 1252) DatePart(&quot;ss&quot;, GetDate()), 2) + &quot;.000&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get P_ID from PackageLogger"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{16a75514-9c47-4131-943c-f4024f84a485}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get P_ID from PackageLogger"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="Select PackageLoggerId&#xA;from [dbo].[PackageLogger]&#xA;where&#xA; [PackageName]=?&#xA;and [DataFlowName]=?&#xA;and [SubFlowInformation]=?&#xA;and [ExecutionBegan]=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL-Inser PackageLogger Execution Start Date"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{a5046984-ef21-4c04-9141-8f0f19c73c50}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL-Inser PackageLogger Execution Start Date"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="INSERT INTO [dbo].[PackageLogger]&#xA;( PackageName&#xA;, DataFlowName&#xA;, SubFlowInformation&#xA;, ExecutionBegan&#xA;, ExecutionEnded&#xA;, ExecutionStatus&#xA;, RunTimeEnvironment&#xA;)&#xA;VALUES (?, ?, ?, ?, ?, 'Running' , 'Prod' )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="User::ExecutionEnded"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Update Package Logger"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{c50f0deb-f2c5-4533-b04f-04a237788cfa}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Update Package Logger"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+          SQLTask:SqlStatementSource="update [PackageLogger]&#xA;&#xA;   set [RowsInserted]       = ?&#xA;&#xA;    , [RowsUpdated]     = ?&#xA;&#xA;    , [RowsDeleted]     = ?&#xA;&#xA;&#x9;, [RowsNoChange]     = ?&#xA;     &#xA;     , [ExecutionEnded]     = ?&#xA;    &#xA;     , [ExecutionStatus] = 'Complete'&#xA;&#xA;    where &#xA;       [PackageName]        = ?&#xA;   &#xA;    and [DataFlowName]       = ?&#xA;   &#xA;    and [SubFlowInformation] = ?&#xA;   &#xA;    and [ExecutionBegan]     = ?&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::RowsInserted"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::RowsUpdated"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="User::ExecutionEnded"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="User::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="User::DataFlowName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="User::SubFlowInformation"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="User::ExecutionBegan"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::RowsDeleted"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="User::RowsNoChange"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{36f61145-fc58-4ef1-a5bb-193f74d7ec10}"
+      DTS:From="Package\EXP_BEGAN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SQL-Inser PackageLogger Execution Start Date" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{8374e5b3-c9fa-47e5-90cb-400e1ab0966c}"
+      DTS:From="Package\SQL-Inser PackageLogger Execution Start Date"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get P_ID from PackageLogger" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{15116399-6c4b-484b-bbc7-503153443910}"
+      DTS:From="Package\DFT_LoadPromotion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\EXP_END" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{3476a18c-535b-4810-a947-4095666d97d3}"
+      DTS:From="Package\EXP_END"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQL_Update Package Logger" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{2f06e4b0-09b3-4bb4-9c7c-edc65bb385e7}"
+      DTS:From="Package\Get P_ID from PackageLogger"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DFT_LoadPromotion" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{88640DDF-20B3-4710-9B3A-FFEEE99F294F}"
+      DTS:EventID="16384"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="Propriété de propagation de l'événement"
+          DTS:DTSID="{7C6D6BB7-1273-4483-9E62-920C45A98C3A}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL_Error Log"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{20f1ffbe-77e7-435e-9fbf-503f25f375a4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_Error Log"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+              SQLTask:SqlStatementSource="insert into [dbo].[PackageErrorLog]&#xA;([P_ID]&#xA;      ,[MachineName]&#xA;      ,[PackageName]&#xA;      ,[TaskName]&#xA;      ,[ErrorCode]&#xA;      ,[ErrorDescription]&#xA;      ,[Date]&#xA;)&#xA;Values (?,?,?,?,?,?,getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::P_ID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::MachineName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tâche d'exécution de requêtes SQL"
+          DTS:DTSID="{e09a3246-a8bf-4101-9c3f-c6e10470579b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_Update Package Logger Fail"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+              SQLTask:SqlStatementSource="update [PackageLogger]&#xA;set [ExecutionStatus]='Failed'&#xA;where&#xA;[PackageName] =?&#xA;and [DataFlowName]=?&#xA;and [SubFlowInformation]=?&#xA;and [ExecutionBegan] =?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::DataFlowName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::SubFlowInformation"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::ExecutionBegan"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{bdfa8041-2204-48b1-8213-fff82fd186b4}"
+          DTS:From="Package.EventHandlers[OnError]\SQL_Error Log"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\DFT_LoadPromotion"
+          TopLeft="75.1000000000001,310.3" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\EXP_BEGAN"
+          TopLeft="88.7,5.49999999999995" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\EXP_END"
+          TopLeft="95.9000000000001,411.9" />
+        <NodeLayout
+          Size="308,41.6"
+          Id="Package\Get P_ID from PackageLogger"
+          TopLeft="5.50000000000003,208.7" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\SQL_Update Package Logger"
+          TopLeft="51.1000000000001,513.5" />
+        <NodeLayout
+          Size="299.2,41.6"
+          Id="Package\SQL-Inser PackageLogger Execution Start Date"
+          TopLeft="9.90000000000003,107.1" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="159.5,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.08251953125,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="159.5,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.0825195312501,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="161.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.08251953125,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="159.5,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.0825195312501,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="161.1,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.7632421875,21.08251953125,31.526484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package.EventHandlers[OnError]\SQL_Error Log"
+          TopLeft="220,73" />
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package.EventHandlers[OnError]\SQL_Update Package Logger Fail"
+          TopLeft="188,167" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          TopLeft="294,114.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.3999999999998,52.4"
+              Start="0,0"
+              End="12.3999999999998,44.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2"
+                    Point2="0,26.2"
+                    Point3="4,26.2" />
+                  <mssgle:LineSegment
+                    End="8.39999999999981,26.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.39999999999981,26.2"
+                    Point2="12.3999999999998,26.2"
+                    Point3="12.3999999999998,30.2" />
+                  <mssgle:LineSegment
+                    End="12.3999999999998,44.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\DFT_LoadPromotion">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="298.4,41.6"
+          Id="Package\DFT_LoadPromotion\OLE DB_SQL Command UPDATES_Promotion"
+          TopLeft="269.5,513.5" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion"
+          TopLeft="268.100001390775,8.96666669421721" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion"
+          TopLeft="5.50000000000009,513.5" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\DFT_LoadPromotion\Nombre de lignes_Modified"
+          TopLeft="295.1,411.9" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\DFT_LoadPromotion\Fractionnement conditionnel"
+          TopLeft="274.7,310.3" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\DFT_LoadPromotion\Nombre de lignes_New"
+          TopLeft="74.1000000000001,411.9" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\DFT_LoadPromotion\LookUp_Promotion"
+          TopLeft="314.7,208.7" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\DFT_LoadPromotion\Colonne dérivée"
+          TopLeft="301.9,107.1" />
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Sortie de source OLE DB]"
+          TopLeft="387.700001390775,50.5666666942172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.60000139077505,56.5333333057828"
+              Start="0,0"
+              End="-8.60000139077505,49.0333333057828">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2666666528914" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2666666528914"
+                    Point2="0,28.2666666528914"
+                    Point3="-4,28.2666666528914" />
+                  <mssgle:LineSegment
+                    End="-4.60000139077505,28.2666666528914" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.60000139077505,28.2666666528914"
+                    Point2="-8.60000139077505,28.2666666528914"
+                    Point3="-8.60000139077505,32.2666666528914" />
+                  <mssgle:LineSegment
+                    End="-8.60000139077505,49.0333333057828" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="398.3,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.2,60"
+              Start="0,0"
+              End="-19.2,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-15.2,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.2,30"
+                    Point2="-19.2,30"
+                    Point3="-19.2,34" />
+                  <mssgle:LineSegment
+                    End="-19.2,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.27701171875,35,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Sortie de colonne dérivée]"
+          TopLeft="379.1,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.2000000000001,60"
+              Start="0,0"
+              End="19.2000000000001,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="15.2000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.2000000000001,30"
+                    Point2="19.2000000000001,30"
+                    Point3="19.2000000000001,34" />
+                  <mssgle:LineSegment
+                    End="19.2000000000001,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Nombre de lignes sortie 11]"
+          TopLeft="397.5,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.2,60"
+              Start="0,0"
+              End="21.2,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="17.2,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.2,30"
+                    Point2="21.2,30"
+                    Point3="21.2,34" />
+                  <mssgle:LineSegment
+                    End="21.2,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Nombre de lignes sortie 1]"
+          TopLeft="167.3,453.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-63.8,60"
+              Start="0,0"
+              End="-63.8,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-59.8,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.8,30"
+                    Point2="-63.8,30"
+                    Point3="-63.8,34" />
+                  <mssgle:LineSegment
+                    End="-63.8,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[New]"
+          TopLeft="328.9,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-161.6,59.9999999999999"
+              Start="0,0"
+              End="-161.6,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5044136191677"
+                    Point2="0,20.5044136191677"
+                    Point3="-4,20.5044136191677" />
+                  <mssgle:LineSegment
+                    End="-157.6,20.5044136191677" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-157.6,20.5044136191677"
+                    Point2="-161.6,20.5044136191677"
+                    Point3="-161.6,24.5044136191677" />
+                  <mssgle:LineSegment
+                    End="-161.6,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.03404296875,25.5044136191677,20.4680859375,9.3974609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[Modified]"
+          TopLeft="379.1,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.4,59.9999999999999"
+              Start="0,0"
+              End="18.4,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="14.4,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.4,30"
+                    Point2="18.4,30"
+                    Point3="18.4,34" />
+                  <mssgle:LineSegment
+                    End="18.4,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-9.70798828125001,35,37.8159765625,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\DFT_LoadPromotion\Nombre de lignes_NoChange"
+          TopLeft="534.666645639473,414.033331735399" />
+        <EdgeLayout
+          Id="Package\DFT_LoadPromotion.Paths[No Change]"
+          TopLeft="429.3,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212.966645639473,62.133331735399"
+              Start="0,0"
+              End="212.966645639473,54.633331735399">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2334588906597" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2334588906597"
+                    Point2="0,21.2334588906597"
+                    Point3="4,21.2334588906597" />
+                  <mssgle:LineSegment
+                    End="208.966645639473,21.2334588906597" />
+                  <mssgle:CubicBezierSegment
+                    Point1="208.966645639473,21.2334588906597"
+                    Point2="212.966645639473,21.2334588906597"
+                    Point3="212.966645639473,25.2334588906597" />
+                  <mssgle:LineSegment
+                    End="212.966645639473,54.633331735399" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="81.7619751634867,26.2334588906597,49.4426953125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadPromotion\SQL_OLEDB_STG_DimPromotion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadPromotion\SQL_OLE DB_Promotion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_LoadPromotion\LookUp_Promotion">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

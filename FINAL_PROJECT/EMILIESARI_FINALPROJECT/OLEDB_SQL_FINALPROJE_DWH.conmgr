@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB_SQL_FINALPROJE_DWH"
+  DTS:DTSID="{7797CA77-32EE-4CCD-B7B2-AB5856D28793}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ICT\ESRINERDEM;Initial Catalog=FINALPROJE_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ESRINERDEM_FINALPROJESI-{7797CA77-32EE-4CCD-B7B2-AB5856D28793}ICT\ESRINERDEM.FINALPROJE_DWH;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB_SQL_AdventureworksDW2016CTP3"
+  DTS:DTSID="{FCCA7D69-5B0C-4172-BD09-C4C26FBF3BD7}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ICT\ESRINERDEM;Initial Catalog=AdventureworksDW2016CTP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ESRINERDEM_FINALPROJESI-{FCCA7D69-5B0C-4172-BD09-C4C26FBF3BD7}ICT\ESRINERDEM.AdventureworksDW2016CTP3;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
